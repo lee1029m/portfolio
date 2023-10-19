@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="lib/dist/fullpage.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="lib/dist/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+
+        window.onload = function () {
+            document.body.style.cursor = 'none';
+
+            setTimeout(function(){
+                $('.loading').fadeOut()
+            },1000)
+
+            let mouse = document.querySelector('.cursor')
+            document.onmousemove = function (e) {
+                let mouseX = e.pageX
+                let mouseY = e.pageY
+
+                mouse.style.left = mouseX + 'px'
+                mouse.style.top = mouseY + 'px'
+            }
+            var myFullpage = new fullpage('#fullpage', {
+
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage','5rdPage'],
+                navigation: true,
+                navigationPosition: 'left',
+                /* navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Any text!'], */
+                showActiveTooltip: true,
+            });
+
+            const toggle = document.getElementById('toggleDark');
+            const body = document.querySelector('body');
+
+
+            toggle.addEventListener('click', function () {
+                this.classList.toggle('bi-moon');
+                if (this.classList.toggle('bi-brightness-low-fill')) {
+                    body.style.background = '#E9D9CA';
+                    body.style.color = '#121212';
+                    body.style.transition = '2s';
+                    document.documentElement.style.setProperty('--background', '#EBE1DB')
+                    document.getElementById('btn_box').style.border = '1px solid #333'
+                    document.querySelector('i').style.color = '#d3a293'
+                } else {
+                    body.style.background = '#121212';
+                    body.style.color = 'white';
+                    body.style.transition = '2s';
+                    document.documentElement.style.setProperty('--background', '#4B5A57')
+                    document.getElementById('btn_box').style.border = '1px solid #D3A293'
+                    document.querySelector('i').style.color = '#fff'
+                }
+            })
+
+            $('.menu_open').click(function(){
+                $('.menu_1').animate({
+                    'right' : '0'
+                })
+                $('body').addClass('on')
+                
+            })
+            
+            $('.menu_close').click(function(){
+                $('.menu_1').animate({
+                    'right' : '-100%'
+                }, 700)
+
+                $('body').removeClass('on')
+            })
+        }
+
+        $(function () {
+
+            let menuWidth = $(".menu ul li").outerWidth();
+            $(".bar").css({
+                width: menuWidth,
+                height: "3px",
+            });
+
+            $(".menu ul li").click(function () {
+                let move = $(this).position().left;
+
+                let thisWidth = $(this).outerWidth();
+
+                console.log(move);
+                console.log(thisWidth);
+                $(".bar").animate({
+                    left: move,
+                    width: thisWidth,
+                });
+            });
+
+            var swiper = new Swiper("#section4 .mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                observer: true,
+                observeParents: true,
+            });
+
+            $(".web_menu li").click(function () {
+                $(".web_menu li").removeClass("on");
+                $(this).addClass("on");
+
+                $(".right .list").removeClass("on");
+                $(".right .list").eq($(this).index()).addClass("on");
+            });
+
+            $(".design_menu li").click(function () {
+                $(".design_menu li").removeClass("on");
+                $(this).addClass("on");
+
+                $("#section4 .mySwiper").removeClass("on");
+                $("#section4 .mySwiper").eq($(this).index()).addClass("on");
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="loading">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div><!-- .loading end -->
+    <div id="wrap">
+        <div class="cursor">
+            <img src="img/cur.png" alt="">
+        </div>
+        <header>
+            <div class="header">
+            <h1><a href="#"><img src="img/BG1.png" alt=""></a></h1>
+
+            <nav class="menu">
+                <ul class="gnb">
+                    <li class="depth01">
+                        <a href="#firstPage">MAIN</a>
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#secondPage">PROFILE</a>
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#3rdPage">WEB/APP</a>
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <a href="#5rdPage">DESIGN</a>
+                    </li><!-- .depth01 end -->
+                </ul><!-- .gnb end -->
+
+                <div class="bar">
+                    <span>바</span>
+                </div><!-- .bar end -->
+            </nav>
+
+            <div class="right">
+                <i class="bi-brightness-low-fill" id="toggleDark"></i>
+                <div class="menu_open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- .menu_open -->
+            </div><!-- .right end -->
+
+            <nav class="menu_1">
+                <div class="menu_close">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div><!-- .menu_close end -->
+
+                <ul class="gnb">
+                    <li class="depth01">
+                        <span>01</span>
+                        <a href="#secondPage">PROFILE</a>
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <span>02</span>
+                        <a href="#3rdPage">WEB/APP</a>
+                    </li><!-- .depth01 end -->
+                    <li class="depth01">
+                        <span>03</span>
+                        <a href="#5rdPage">DESIGN</a>
+                    </li><!-- .depth01 end -->
+                </ul><!-- .gnb end -->
+            </nav>
+            </div><!-- .header end -->
+        </header>
+
+        <div id="fullpage">
+            <div class="section" id="section0">
+                <ul>
+                    <li class="image1"><img src="img/BG2.png" alt=""></li>
+                    <li class="image2"><img src="img/BG3.png" alt=""></li>
+                    <li class="image3"><img src="img/BG4.png" alt=""></li>
+                    <li class="image4"><img src="img/BG5.png" alt=""></li>
+                    <li class="image5"><img src="img/BG6.png" alt=""></li>
+                    <li class="image6"><img src="img/BG2.png" alt=""></li>
+                </ul>
+                <div class="main_image">
+                    <figure>
+                        <img src="img/BG1.png" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="section" id="section1">
+                <div class="inner">
+                    <div class="left">
+                        <h3>PROFILE</h3>
+                        <div class="text">
+                            <span>안녕하세요. 이미진 입니다.</span>
+                            <h4>LEEMIJIN</h4>
+                        </div><!-- .text end -->
+                        <div class="box">
+                            <ul>
+                                <li>Phone</li>
+                                <li>Emali</li>
+                                <li>Address</li>
+                            </ul>
+                            <ul>
+                                <li>010-5107-6678</li>
+                                <li>kln6678@naver.com</li>
+                                <li>부산 금정구</li>
+                            </ul>
+                        </div>
+                        <div class="btn">
+                            <a href="pdf/이미진 이력서&자소서.pdf"><span id="btn_box">이력서</span></a>
+                        </div><!-- .btn end -->
+                    </div><!-- .left end -->
+                    <div class="right">
+                        <div class="top">
+                            <h4>Certifcate</h4>
+                            <div>
+                                <ul>
+                                    <li>2022.09.21</li>
+                                    <li>2018.12.28</li>
+                                </ul>
+                                <ul>
+                                    <li>웹 디자인 기능사 [필기]</li>
+                                    <li>컴퓨터 그래픽스 운용기능사</li>
+                                </ul>
+                            </div>
+                        </div><!-- .top end -->
+                        <div class="bottom">
+                            <h4>Skills</h4>
+                            <div>
+                                <ul>
+                                    <li>HTML/CSS</li>
+                                    <li>JavaScript/Jquery</li>
+                                    <li>Photoshop</li>
+                                    <li>Illustrator</li>
+                                </ul>
+                                <ul>
+                                    <li><span></span></li>
+                                    <li><span></span></li>
+                                    <li><span></span></li>
+                                    <li><span></span></li>
+                                </ul>
+                            </div>
+                        </div><!-- .bottom end -->
+                    </div><!-- .right end -->
+                </div><!-- .inner end -->
+            </div>
+            <div class="section" id="section2">
+                <div class="inner">
+                    <div class="left">
+                        <h3>WEB/APP</h3>
+                        <ul class="web_menu">
+                            <li class="on"><a href="#"><span>01</span>알라딘</a></li>
+                            <li><a href="#"><span>02</span>푸드팩토리</a></li>
+                            <li><a href="#"><span>03</span>제이에스티나</a></li>
+                            <li><a href="#"><span>04</span>스미스티</a></li>
+                            <li><a href="#"><span>05</span>위드굿즈</a></li>
+                        </ul><!-- .web_menu end -->
+                    </div><!-- .left end -->
+                    <div class="right">
+                        <div class="list on">
+                            <div class="item">
+                                <div class="text">
+                                    <span>01</span>
+                                    <h4>알라딘</h4>
+                                    <strong>리_디자인</strong>
+                                    <p>PC / 모바일 작업</p>
+                                    <div>
+                                        <p>참여도:100%</p>
+                                        <h5>툴:HTML,CSS,JavaScript/Jquery,포토샵,피그마</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="pdf/알라딘_프로젝트.pdf">프로젝트</a></li>
+                                        <li><a href="https://www.figma.com/file/hRyD14fqRSda86gwY2JjWV/Untitled?type=design&node-id=0-1&mode=design&t=SC6UKFJuEzbbsnlI-0">피그마</a></li>
+                                        <li><a href="https://lee1029m.github.io/aladin/">사이트</a></li>
+                                    </ul>
+                                </div><!-- .text end -->
+                                <figure>
+                                    <img src="img/web_1.png" alt="">
+                                </figure>
+                            </div><!-- .item end -->
+                        </div><!-- .list end -->
+                        <div class="list">
+                            <div class="item">
+                                <div class="text">
+                                    <span>02</span>
+                                    <h4>푸드팩토리</h4>
+                                    <strong>리_디자인</strong>
+                                    <p>PC 디자인 작업</p>
+                                    <div>
+                                        <p>참여도:100%</p>
+                                        <h5>툴:HTML,CSS,JavaScript/Jquery,포토샵,피그마</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="https://www.figma.com/file/6huYysR1SXuGAVDS86QBtW/Untitled?type=design&node-id=0-1&mode=design&t=HjnglPeYsiBUqQoQ-0">피그마</a></li>
+                                        <li><a href="https://lee1029m.github.io/Food-factol/">사이트</a></li>
+                                    </ul>
+                                </div><!-- .text end -->
+                                <figure>
+                                    <img src="img/web_2.png" alt="">
+                                </figure>
+                            </div><!-- .item end -->
+                        </div><!-- .list end -->
+                        <div class="list">
+                            <div class="item">
+                                <div class="text">
+                                    <span>03</span>
+                                    <h4>제이에스티나</h4>
+                                    <strong>리_디자인</strong>
+                                    <p>PC 디자인 작업</p>
+                                    <div>
+                                        <p>참여도:100%</p>
+                                        <h5>툴:HTML,CSS,JavaScript/Jquery,포토샵,피그마</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="https://www.figma.com/file/rP4qXU0dXTO9mGbjNYLuTO/Untitled?type=design&mode=design&t=HjnglPeYsiBUqQoQ-0">피그마</a></li>
+                                        <li><a href="https://lee1029m.github.io/je/">사이트</a></li>
+                                    </ul>
+                                </div><!-- .text end -->
+                                <figure>
+                                    <img src="img/web_3.png" alt="">
+                                </figure>
+                            </div><!-- .item end -->
+                        </div><!-- .list end -->
+                        <div class="list">
+                            <div class="item">
+                                <div class="text">
+                                    <span>04</span>
+                                    <h4>스미스티</h4>
+                                    <strong>리_디자인</strong>
+                                    <p>PC / 모바일 작업</p>
+                                    <div>
+                                        <p>참여도:100%</p>
+                                        <h5>툴:HTML,CSS,JavaScript/Jquery,포토샵,피그마</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="https://lee1029m.github.io/smithy/">사이트</a></li>
+                                    </ul>
+                                </div><!-- .text end -->
+                                <figure>
+                                    <img src="img/web_4.png" alt="">
+                                </figure>
+                            </div><!-- .item end -->
+                        </div><!-- .list end -->
+                        <div class="list">
+                            <div class="item">
+                                <div class="text">
+                                    <span>05</span>
+                                    <h4>위드굿즈</h4>
+                                    <strong>리_디자인</strong>
+                                    <p>PC 디자인 작업</p>
+                                    <div>
+                                        <p>참여도:100%</p>
+                                        <h5>툴:HTML,CSS,포토샵,피그마</h3>
+                                    </div>
+                                    <ul>
+                                        <li><a href="https://www.figma.com/file/43ybGMhB81AoFRrvITRVWz/Untitled?type=design&mode=design&t=BQ7xTFUOQ6Ogksfl-0">피그마</a></li>
+                                        <li><a href="https://lee1029m.github.io/withgoods/">사이트</a></li>
+                                    </ul>
+                                </div><!-- .text end -->
+                                <figure>
+                                    <img src="img/web_5_1.png" alt="">
+                                </figure>
+                            </div><!-- .item end -->
+                        </div><!-- .list end -->
+                    </div><!-- .right end -->
+                </div><!-- .inner end -->
+            </div>
+            <div class="section" id="section3">
+                <div class="inner">
+                    <div class="list">
+                        <figure>
+                            <img src="img/Mask group-1.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h4>고봉민김밥인</h4>
+                            <p>PC 디자인 작업</p>
+                            <ul>
+                                <li>참여도:100%</li>
+                                <li>툴:HTML,CSS,포토샵,피그마</li>
+                            </ul>
+                                <ul class="btn">
+                                    <li><a href="https://lee1029m.github.io/project4/">사이트</a></li>
+                                    <li><a href="https://www.figma.com/file/cPOFsTcCET1KRA0dKL71T0/%EA%B3%A0%EB%B4%89%EB%AF%BC%EA%B9%80%EB%B0%A5%EC%9D%B8?type=design&mode=design&t=aBQneyGdijxIk8T9-0">피그마</a></li>
+                                    <li><a href="pdf/고봉민.pdf">프로젝트</a></li>
+                                </ul>
+                        </div><!-- .text end -->
+                        <div class="image">
+                            <img src="img/BG2.png" alt="">
+                        </div>
+                    </div><!-- .list end -->
+                    <div class="list">
+                        <figure>
+                            <img src="img/Mask group-2.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h4>이마트24 편의점</h4>
+                            <p>PC 디자인 작업</p>
+                            <ul>
+                                <li>참여도:100%</li>
+                                <li>툴:포토샵,피그마</li>
+                            </ul>
+                            <ul class="btn">
+                                <li><a href="https://www.figma.com/file/6JM1SByNJJ7dwdTvAreq6O/%EC%9D%B4%EB%A7%88%ED%8A%B824?type=design&mode=design&t=aBQneyGdijxIk8T9-0">피그마</a></li>
+                                <li><a href="pdf/이마트.pdf">프로젝트</a></li>
+                            </ul>
+                        </div><!-- .text end -->
+                            <div class="image0_1">
+                                <img src="img/BG3.png" alt="">
+                            </div><!-- .image0_1 end -->
+                    </div><!-- .list end -->
+                    <div class="list">
+                        <figure>
+                            <img src="img/Mask group-3.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h4>마녀공장</h4>
+                            <p>PC/모바일 작업</p>
+                            <ul>
+                                <li>참여도:100%</li>
+                                <li>툴:HTML,CSS,JavaScript/Jquery</li>
+                            </ul>
+                            <ul class="btn">
+                                <li><a href="https://lee1029m.github.io/project6/">사이트</a></li>
+                            </ul>
+                        </div><!-- .text end -->
+                        <div class="image0">
+                            <img src="img/BG2.png" alt="">
+                        </div><!-- .image0 end -->
+                    </div><!-- .list end -->
+                    <div class="list">
+                        <figure>
+                            <img src="img/Mask group-4.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h4>여행패키지</h4>
+                            <p>PC 디자인 작업</p>
+                            <ul>   
+                                <li>참여도:100%</li>
+                                <li>툴:HTML,CSS,피그마 </li>
+                            </ul>
+                            <ul class="btn">
+                                <li><a href="https://lee1029m.github.io/project5/">사이트</a></li>
+                                <li><a href="https://www.figma.com/file/1623HBYyJkndos2FMVolc4/Untitled?type=design&mode=design&t=aBQneyGdijxIk8T9-0">피그마</a></li>
+                            </ul>
+                        </div><!-- .text end -->
+                    </div><!-- .list end -->
+                          
+                </div><!-- .inner end -->
+            </div>
+            <div class="section" id="section4">
+                <div class="inner">
+                    <div class="left">
+                        <h3>DESIGN</h3>
+                        <ul class="design_menu">
+                            <li class="on">Photoshop</li>
+                            <li>Illustrator</li>
+                        </ul><!-- .design_menu end  -->
+                    </div><!-- .left end -->
+
+                    <div class="right">
+                        <div class="swiper mySwiper on">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="img/10.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/10.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>웨딩 주얼리 포스터 디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/11.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/11.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 디자인</h4>
+                                        <p>작업시간: 1시간</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/12.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/12.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>커플링 포스터<br>디자인</h4>
+                                        <p>작업시간: 1시간</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/13.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/13.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 카피 디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/14.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/14.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 카피 디자인</h4>
+                                    </div><!-- .text end -->
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="img/14_1.gif" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/14_1.gif" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포트폴리오 포스터<br>디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/14_2.gif" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/14_2.gif" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/15.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/15.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 디자인</h4>
+                                        <p>작업시간: 1시간</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/16.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/16.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 디자인</h4>
+                                        <p>작업시간: 1시간</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/17.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/17.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>네일 포스터 디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/18.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/18.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>제품 주얼리 포스터<br>디자인</h4>
+                                        <p>작업시간: 1시간</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/19_1.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/19_1.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="img/20_1.png" data-fancybox="images">
+                                        <div class="img_box">
+                                          <img src="img/20_1.png" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h4>포스터 디자인</h4>
+                                        <p>작업시간: 30분</p>
+                                    </div><!-- .text end -->
+                                </div>
+
+                            </div>
+                           
+                        </div>
+
+                    </div><!-- .right end -->
+                </div><!-- .inner end -->
+            </div>
+            <footer class="section" id="footer">
+                <p>지금까지 봐주셔서 감사합니다.</p>
+            </footer>
+        </div><!-- #wrap end -->
+</body>
+
+</html>
