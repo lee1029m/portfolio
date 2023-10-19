@@ -173,7 +173,7 @@
     margin-right: 20px;
 }
 #section1 .inner .right .bottom div ul li {
-    height: 35px;
+    height: 30px;
     margin: 5px 0;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li {
@@ -181,7 +181,7 @@
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li span {
     width: 355px;
-    height: 35px;
+    height: 30px;
     border: 1.5px solid #333;
     border-radius: 50px;
     display: block;
