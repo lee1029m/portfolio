@@ -186,21 +186,21 @@
     border-radius: 50px;
     display: block;
 }
-#section1 .inner .right .bottom div ul:nth-child(2) li:hover {
+#section1 .inner .right .bottom div ul:nth-child(2) li {
     border-radius: 50px;
     transition: 1.5s;
     background-color: #4B5A57;
 }
-#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(1):hover {
-    width: 249px;
+#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(1) {
+    width: 240px;
 }
-#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(2):hover {
+#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(2) {
     width: 218px;
 }
-#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(3):hover {
-    width: 263px;
+#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(3) {
+    width: 260px;
 }
-#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(4):hover {
+#section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(4) {
     width: 280px;
 }
 #section2 .inner {
@@ -450,8 +450,8 @@
     position: relative;
 }
 #section4 .swiper-slide .img_box {
-    max-height: 550px;
-    height: 28.64vw;
+    width: 400px;
+    height: 550px;
     overflow: hidden;
     position: relative;
 }

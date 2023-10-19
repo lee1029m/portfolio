@@ -43,6 +43,7 @@ body {
   color: #333;
   background-color: #e9d9ca;
   font-family: "NanumSquareRound"; /* 나눔 스퀘어 라운드 */
+  min-width: 1920px;
 }
 body.on::before {
   content: "";
