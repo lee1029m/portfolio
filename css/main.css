@@ -225,13 +225,14 @@
   top: 0;
   left: 0;
   width: 27%;
-  height: 100%;
+  height: 100vh;
   background: var(--background);
   border-radius: 0 8rem 0 0;
   transition: 2s;
   z-index: -999;
   border: 5px solid #d3a2935b;
   border-left: none;
+  box-sizing: border-box;
 }
 #section2 .left {
   height: 580px;
