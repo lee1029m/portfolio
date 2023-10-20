@@ -38,7 +38,7 @@ body {
   color: #333;
   background-color: #e9d9ca;
   font-family: 'LINESeedKR-Bd';
-  /* min-width: 1920px; */
+  min-width: 1920px;
 }
 body.on::before {
   content: "";
