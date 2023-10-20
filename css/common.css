@@ -2,24 +2,16 @@
 
 /* 글꼴 */
 @font-face {
-  font-family: "omyu_pretty";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "NanumSquareNeo-Variable";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "NanumSquareRound";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
     format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
 }
 * {
@@ -45,7 +37,7 @@ body {
 body {
   color: #333;
   background-color: #e9d9ca;
-  font-family: "NanumSquareRound"; /* 나눔 스퀘어 라운드 */
+  font-family: 'LINESeedKR-Bd';
   /* min-width: 1920px; */
 }
 body.on::before {
@@ -73,7 +65,8 @@ header .inner {
   align-items: center;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   /* z-index: 9; */
   padding: 0 100px;
 }
