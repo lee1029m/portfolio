@@ -3,524 +3,528 @@
 @import url(common.css);
 
 #section0 {
-    height: 100%;
-    /* position: relative; */
+  height: 100%;
+  position: relative;
 }
 #section0 .main_image {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
 }
 #section0 .main_image figure {
-    width: 80rem;
-    animation: heart 2s infinite alternate linear;
+  width: 80rem;
+  animation: heart 2s infinite alternate linear;
 }
 #section0 .main_image figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @keyframes heart {
-    from {
-        transform: scale(.8);
-    }
-    to {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 #section0 .image1 {
-    width: 230px;
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    animation: box-ani 4s infinite alternate linear;
+  width: 230px;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  animation: box-ani 4s infinite alternate linear;
 }
 #section0 .image2 {
-    width: 350px;
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    animation: box-ani 2s infinite alternate linear;
+  width: 350px;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  animation: box-ani 2s infinite alternate linear;
 }
 #section0 .image3 {
-    width: 300px;
-    position: absolute;
-    right: 25%;
-    top: 30%;
-    transform: translateY(-50%);
-    animation: box 2.5s linear infinite alternate;
+  width: 300px;
+  position: absolute;
+  right: 25%;
+  top: 30%;
+  transform: translateY(-50%);
+  animation: box 2.5s linear infinite alternate;
 }
 @keyframes box {
-    from {
-        transform: scale(.9);
-    }
-    to {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 #section0 .image4 {
-    width: 180px;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    animation: box 3s linear infinite alternate;
+  width: 180px;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  animation: box 3s linear infinite alternate;
 }
 #section0 .image5 {
-    width: 500px;
-    position: absolute;
-    top: 40%;
-    left: 36%;
-    z-index: -9;
-    animation: box 2.3s linear infinite alternate;
+  width: 500px;
+  position: absolute;
+  top: 40%;
+  left: 36%;
+  z-index: -9;
+  animation: box 2.3s linear infinite alternate;
 }
 #section0 .image6 {
-    width: 180px;
-    position: absolute;
-    bottom: 20%;
-    right: 20%;
-    z-index: -9;
-    animation: box-ani 2.3s linear infinite alternate;
+  width: 180px;
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
+  z-index: -9;
+  animation: box-ani 2.3s linear infinite alternate;
 }
 #section0 li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @keyframes box-ani {
-    from {
-        transform: translate(0,0);
-    }
-    to {
-        transform: translateX(100px);
-    }
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translateX(100px);
+  }
 }
 #section1 .inner h3 {
-    font-size: 45px;
-    margin-bottom: 97px;
+  font-size: 45px;
+  margin-bottom: 97px;
 }
 #section1 .inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #section1 .inner .left {
-    margin-right: 20%;
+  margin-right: 20%;
+  position: relative;
+  right: -130%;
+  transition: all 1.2s ease;
 }
 #section1 .inner .left .text {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 #section1 .inner .left .text h4 {
-    font-size: 50px;
-    font-weight: bold;
+  font-size: 50px;
+  font-weight: bold;
 }
 #section1 .inner .left .box ul {
-    display: inline-block;
-    margin-right: 50px;
+  display: inline-block;
+  margin-right: 50px;
 }
 #section1 .inner .left .box ul:nth-child(1) li {
-    font-size: 20px;
-    font-weight: bold;
-    color: #E2872E;
+  font-size: 20px;
+  font-weight: bold;
+  color: #e2872e;
 }
 #section1 .inner .left .box ul li {
-    height: 34px;
-    font-size: 18px;
+  height: 34px;
+  font-size: 18px;
 }
 #section1 .inner .left .btn {
-    width: 0;
-    text-align: center;
-    margin-top: 50px;
+  width: 0;
+  text-align: center;
+  margin-top: 50px;
 }
 #section1 .inner .left .btn span {
-    width: 189px;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid #333;
-    display: block;
-    font-size: 20px;
+  width: 189px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #333;
+  display: block;
+  font-size: 20px;
 }
 #section1 .inner .left .btn:hover {
-    width: 189px;
-    background-color: #D3A293;
-    font-weight: bold;
-    color: #fff;
-    transition: 1.5s;
+  width: 189px;
+  background-color: #d3a293;
+  font-weight: bold;
+  color: #fff;
+  transition: 1.5s;
+}
+#section1 .inner .right {
+  position: relative;
+  left: -130%;
+  transition: all 1.2s ease;
 }
 #section1 .inner .right h4 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #E2872E;
-    margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #e2872e;
+  margin-bottom: 50px;
 }
 #section1 .inner .right .top {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 #section1 .inner .right .top div ul {
-    display: inline-block;
-    font-size: 20px;
+  display: inline-block;
+  font-size: 20px;
 }
 #section1 .inner .right .top div ul li {
-    margin-right: 100px;
+  margin-right: 100px;
 }
 #section1 .inner .right .bottom div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 #section1 .inner .right .bottom div ul {
-    font-size: 20px;
-    margin-right: 20px;
+  font-size: 20px;
+  margin-right: 20px;
 }
 #section1 .inner .right .bottom div ul li {
-    height: 30px;
-    margin: 5px 0;
+  height: 30px;
+  margin: 5px 0;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li {
-    width: 0;
+  width: 0;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li span {
-    width: 355px;
-    height: 30px;
-    border: 1.5px solid #333;
-    border-radius: 50px;
-    display: block;
+  width: 355px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 50px;
+  display: block;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li {
-    border-radius: 50px;
-    transition: 1.5s;
-    background-color: #4B5A57;
+  border-radius: 50px;
+  transition: 1.5s;
+  background-color: #d3a293;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(1) {
-    width: 240px;
+  width: 240px;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(2) {
-    width: 218px;
+  width: 218px;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(3) {
-    width: 260px;
+  width: 260px;
 }
 #section1 .inner .right .bottom div ul:nth-child(2) li:nth-child(4) {
-    width: 280px;
+  width: 280px;
 }
 #section2 .inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #section2 h3 {
-    font-size: 45px;
+  font-size: 45px;
 }
 #section2::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 27%;
-    height: 100%;
-    background: var(--background);
-    border-radius: 0 8rem 0 0;
-    transition: 2s;
-    z-index: -999;
-    border: 5px solid #d3a2935b;
-    border-left: none;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 27%;
+  height: 100%;
+  background: var(--background);
+  border-radius: 0 8rem 0 0;
+  transition: 2s;
+  z-index: -999;
+  border: 5px solid #d3a2935b;
+  border-left: none;
 }
 #section2 .left {
-    height: 580px;
-    margin-left: 50px;
-    position: relative;
+  height: 580px;
+  margin-left: 50px;
+  position: relative;
 }
 #section2 .left .web_menu {
-    width: 35rem;
-    position: absolute;
-    bottom: 0;
-    left: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
 }
 #section2 .left .web_menu li {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    color: #e4c7bb;
-    font-size: 20px;
-    padding-left: 50PX;
+  width: 350px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: #e4c7bb;
+  font-size: 20px;
+  padding-left: 50px;
 }
 #section2 .left .web_menu li.on {
-    background-color: #D3A293;
-    border-radius: 50px;
-    font-weight: bold;
-    color: #fff;
-    box-shadow: 3px 3px 10px #3333335b;
-    border: 3px solid #ffffff54;
-    position: relative;
+  background-color: #d3a293;
+  border-radius: 50px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 3px 3px 10px #3333335b;
+  border: 3px solid #ffffff54;
+  position: absolute;
+  position: relative;
 }
 #section2 .left .web_menu li.on::before {
-    content: '';
-    background: url('../img/icons8-화살-48.png')center center / cover no-repeat;
-    width: 30px;
-    height: 30px;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+  content: "";
+  background: url("../img/icons8-화살-48.png") center center / cover no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #section2 .left .web_menu li span {
-    font-size: 18px;
-    margin-right: 80px;
+  font-size: 18px;
+  padding-right: 50px;
 }
 #section2 .right .list {
-    /* display: flex; */
-    flex-wrap: wrap;
-    justify-content: space-between;
-    display: none;
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: none;
 }
 #section2 .right .list.on {
-    display: flex;
+  display: flex;
 }
 #section2 .right .list .item {
-    width: 100%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #section2 .right .list .item .text {
-    width: 400px;
+  width: 400px;
 }
 #section2 .right .list .item .text span {
-    font-size: 8rem;
+  font-size: 8rem;
 
-    color: #D3A293;
+  color: #d3a293;
 }
 #section2 .right .list .item .text h4 {
-    font-size: 4rem;
-    margin-top: 30px;
+  font-size: 4rem;
+  margin-top: 30px;
 }
 #section2 .right .list .item .text > p {
-    font-size: 18px;
-    margin: 20px 0;
+  font-size: 18px;
+  margin: 20px 0;
 }
 #section2 .right .list .item .text div p {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
 }
 #section2 .right .list .item .text div h5 {
-    font-size: 16px;
+  font-size: 16px;
 }
 #section2 .right .list .item .text ul li {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #D3A293;
-    color: #fff;
-    font-size: 18px;
-    margin-top: 30px;
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #d3a293;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 30px;
 }
 #section2 .right .list .item .text ul li:hover {
-    background-color: #4B5A57;
-    color: #fff;
-    font-weight: bold;
+  background-color: #4b5a57;
+  color: #fff;
+  font-weight: bold;
 }
 #section2 .right .list .item figure {
-    max-height: 400px;
-    height: 20.83vw;
+  max-height: 400px;
+  height: 20.83vw;
 }
 #section2 .right .list .item figure img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 #section3 .inner {
-    margin-top: 15rem;
-    position: relative;
+  margin-top: 15rem;
+  position: relative;
 }
 #section3 .inner .list {
-    width: 70%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #D3A293; */
-    border-radius: 10px;
-    margin-bottom: 50px;
-    position: relative;
+  width: 70%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #D3A293; */
+  border-radius: 10px;
+  margin-bottom: 50px;
+  position: relative;
 }
 #section3 .inner .list .image {
-    width: 200px;
-    position: absolute;
-    right: -25%;
-    bottom: 0;
-    animation: box-ani 2s infinite alternate linear;
+  width: 200px;
+  position: absolute;
+  right: -25%;
+  bottom: 0;
+  animation: box-ani 2s infinite alternate linear;
 }
 #section3 .inner .list .image0 {
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    right: -10%;
-    transform: translateY(-50%);
-    animation: box-ani 3s infinite alternate linear;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  animation: box-ani 3s infinite alternate linear;
 }
 #section3 .inner .list .image0_1 {
-    width: 400px;
-    position: absolute;
-    top: 30%;
-    left: -50%;
-    animation: box-ani 4s infinite alternate linear;
+  width: 400px;
+  position: absolute;
+  top: 30%;
+  left: -50%;
+  animation: box-ani 4s infinite alternate linear;
 }
 #section3 .inner .list img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-#section3 .inner .list:nth-child(1n) {
-    float: left;
+#section3 .inner .list {
+  float: left;
 }
 #section3 .inner .list:nth-child(2n) {
-    float: right;
+  float: right;
 }
 #section3 .inner .list:nth-child(2n) .text {
-    order: -1;
-} 
+  order: -1;
+}
 #section3 .inner .list figure {
-    width: 600px;
-    border-radius: 20px;
+  width: 600px;
+  border-radius: 20px;
 }
 #section3 .inner .list figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20PX;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 #section3 .inner .list .text {
-    width: 30%;
-    margin: 0 50PX;
+  width: 30%;
+  margin: 0 50px;
 }
 #section3 .inner .list .text h4 {
-    font-size: 30PX;
+  font-size: 30px;
 }
 #section3 .inner .list .text ul {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 #section3 .inner .list .text .btn li {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #D3A293;
-    color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #d3a293;
+  color: #fff;
 }
 #section3 .inner .list .text .btn li:hover {
-    background-color: #4B5A57;
-    font-weight: bold;
-    transition: 1.2s;
+  background-color: #4b5a57;
+  font-weight: bold;
+  transition: 1.2s;
 }
-#section4 .inner  {
-    position: relative;
+#section4 .inner {
+  position: relative;
 }
 #section4 .inner .left {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 #section4 .inner .left h3 {
-    font-size: 45px;
+  font-size: 45px;
 }
 #section4 .inner .left .design_menu li {
-    display: inline-block;
-    font-size: 30px;
-    margin-left: 20px;
+  display: inline-block;
+  font-size: 30px;
+  margin-left: 20px;
 }
 #section4 .inner .left .design_menu li.on {
-    color: #D3A293;
-    font-weight: bold;
-    font-size: 35px;
+  color: #d3a293;
+  font-weight: bold;
+  font-size: 35px;
 }
 #section4 .inner .right .mySwiper {
-    display: none;
+  display: none;
 }
 #section4 .inner .right .mySwiper.on {
-    display: block;
+  display: block;
 }
 #section4 .inner .right .mySwiper .swiper-slide .img_box:hover img {
-    border-radius: 50px 0 50px 0;
-    transition: 2s;
+  border-radius: 50px 0 50px 0;
+  transition: 2s;
 }
 #section4 .inner .right .mySwiper .swiper-slide .img_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #section4 .swiper-slide {
-    position: relative;
+  max-width: 400px;
+  width: 20.83%;
+  position: relative;
 }
 #section4 .swiper-slide .img_box {
-    width: 400px;
-    height: 550px;
-    overflow: hidden;
-    position: relative;
+  max-height: 550px;
+  height: 28.64vw;
+  overflow: hidden;
+  position: relative;
 }
 #section4 .swiper-slide .img_box::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    display: block;
-    content: '';
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.24);
-    border-radius: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 #section4 .swiper-slide .img_box:hover::before {
-    -webkit-animation: circle 1s;
-    animation: circle 1s;
+  -webkit-animation: circle 1s;
+  animation: circle 1s;
 }
 @-webkit-keyframes circle {
-    0% {
-      opacity: 1;
-    }
-    40% {
-      opacity: 1;
-    }
-    100% {
-      width: 200%;
-      height: 200%;
-      opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 @keyframes circle {
-    0% {
-      opacity: 1;
-    }
-    40% {
-      opacity: 1;
-    }
-    100% {
-      width: 200%;
-      height: 200%;
-      opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
 }
 #section4 .inner .right .swiper-slide .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #33333396;
-    padding: 20px 40px;
-    font-size: 15px;
-    font-weight: bold;
-    opacity: 0;
-    color: #fff;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #33333396;
+  padding: 20px 40px;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0;
+  color: #fff;
+  text-align: center;
 }
-#section4 .inner .right .swiper-slide:hover .text  {
-    opacity: 1;
-    transition: 1.7s;
+#section4 .inner .right .swiper-slide:hover .text {
+  opacity: 1;
+  transition: 1.7s;
 }
-
-/* @media screen and (max-width:1790px) {
-    
-    #section2 .right .list .item {
-        justify-content: center;
-    }
-} */

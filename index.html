@@ -39,13 +39,34 @@
             var myFullpage = new fullpage('#fullpage', {
 
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage','5rdPage'],
-                navigation: true,
-                navigationPosition: 'left',
-                /* navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Any text!'], */
-                showActiveTooltip: true,
+                /* navigationPosition: 'left',
+                navigationTooltips: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Any text!'], */
+                /* showActiveTooltip: true, */
+                menu: '#menu',
+        afterLoad: function(origin, destination, direction){
+            //section 2
+            if(destination.index == 1){
+                document.querySelector('#section1').querySelector('.left').style.right = 0 + 'px';
+                document.querySelector('#section1').querySelector('.left').style.opacity = 1;
 
-                
+                document.querySelector('#section1').querySelector('.right').style.left = 0 + 'px';
+                document.querySelector('#section1').querySelector('.right').style.opacity = 1;
 
+            }
+
+            //back to original state
+            else if(origin && origin.index == 1){
+                document.querySelector('#section1').querySelector('.left').style.right = 130 + '%';
+                document.querySelector('#section1').querySelector('.left').style.opacity = 0;
+
+                document.querySelector('#section1').querySelector('.right').style.left = 130 + '%';
+                document.querySelector('#section1').querySelector('.right').style.opacity = 0;
+
+            }
+
+            //section 3 is using the state classes to fire the animation
+            //see the CSS code above!
+        }
             });
 
             const toggle = document.getElementById('toggleDark');
@@ -157,7 +178,7 @@
             <img src="img/cur.png" alt="">
         </div>
         <header>
-            <div class="header">
+            <div class="inner">
             <h1><a href="#"><img src="img/BG1.png" alt=""></a></h1>
 
             <nav class="menu">
@@ -212,7 +233,7 @@
                     </li><!-- .depth01 end -->
                 </ul><!-- .gnb end -->
             </nav>
-            </div><!-- .header end -->
+            </div><!-- .inner end -->
         </header>
 
         <div id="fullpage">

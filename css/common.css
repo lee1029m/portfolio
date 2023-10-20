@@ -34,6 +34,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 html,
 body {
   font-size: 62.5%;
@@ -43,7 +46,7 @@ body {
   color: #333;
   background-color: #e9d9ca;
   font-family: "NanumSquareRound"; /* 나눔 스퀘어 라운드 */
-  min-width: 1920px;
+  /* min-width: 1920px; */
 }
 body.on::before {
   content: "";
@@ -63,10 +66,8 @@ body.on::before {
   width: calc(100% - 200px);
   margin: 0 auto;
 }
-header .header {
+header .inner {
   height: 100px;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,7 +161,7 @@ i {
   /* --wrapBackground: #E9D9CA; */
 }
 /* 😊 */
-header .header .menu_1 {
+header .inner .menu_1 {
   width: 40%;
   height: 100vh;
   background-color: #4b5a57;
@@ -171,7 +172,7 @@ header .header .menu_1 {
   transition: 1s;
   overflow: scroll;
 }
-header .header .menu_1::-webkit-scrollbar {
+header .inner .menu_1::-webkit-scrollbar {
   display: none;
 }
 header .menu_1 .gnb {
@@ -199,10 +200,10 @@ header .menu_1 .gnb .depth01 span {
   top: 50%;
   transform: translateY(-50%);
 }
-header .header .right {
+header .inner .right {
   z-index: 999;
 }
-header .header .right .menu_open span {
+header .inner .right .menu_open span {
   width: 35px;
   height: 4px;
   margin: 5px 0;
@@ -211,7 +212,7 @@ header .header .right .menu_open span {
   border-radius: 50px;
   cursor: pointer;
 }
-header .header .menu_close span {
+header .inner .menu_close span {
   width: 35px;
   height: 4px;
   margin: 5px 0;
