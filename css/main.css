@@ -149,12 +149,12 @@
   background-color: #d3a293;
   font-weight: bold;
   color: #fff;
-  transition: 1.5s;
+  transition: 1s;
 }
 #section1 .inner .right {
   position: relative;
   left: -130%;
-  transition: all 1.2s ease;
+  transition: all 1s ease;
 }
 #section1 .inner .right h4 {
   font-size: 32px;
@@ -382,6 +382,23 @@
 #section3 .inner .list {
   float: left;
 }
+#section3 .left {
+  position: relative;
+  left: -130%;
+  transition: all 3s ease;
+}
+#section3 .right {
+  position: relative;
+  right: -130%;
+  transition: all 3.5s ease;
+}
+body.fp-viewing-4rdPage #section3 .left {
+  left: 0%;
+}
+body.fp-viewing-4rdPage #section3 .right {
+  right: 0%;
+}
+
 #section3 .inner .list:nth-child(2n) {
   float: right;
 }
