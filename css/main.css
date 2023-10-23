@@ -111,6 +111,10 @@
   right: -130%;
   transition: all 1.2s ease;
 }
+#section1 .inner .left p {
+  margin-top: 30px;
+  font-size: 20px;
+}
 #section1 .inner .left .text {
   margin-bottom: 30px;
 }
@@ -354,23 +358,24 @@
   position: relative;
 }
 #section3 .inner .list .image {
-  width: 200px;
+  width: 340px;
   position: absolute;
   right: -25%;
-  bottom: 0;
+  top: 0;
   animation: box-ani 2s infinite alternate linear;
 }
 #section3 .inner .list .image0 {
-  width: 300px;
+  width: 270px;
   position: absolute;
-  top: 70%;
-  left: -20%;
+  top: 60%;
+  left: -10%;
   animation: box-ani 3s infinite alternate linear;
+  z-index: -9;
 }
 #section3 .inner .list .image0_1 {
-  width: 400px;
+  width: 350px;
   position: absolute;
-  top: 30%;
+  top: 70%;
   left: -50%;
   animation: box-ani 4s infinite alternate linear;
 }
